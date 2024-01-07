@@ -1,5 +1,5 @@
 
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm,PasswordChangeForm
 from django import forms
 from .constants import ACCOUNT_TYPE, GENDER_TYPE
 from django.contrib.auth.models import User
@@ -123,3 +123,9 @@ class UserUpdateForm(forms.ModelForm):
             user_address.save()
 
         return user
+
+
+class UserPasswordChangeForm(PasswordChangeForm):
+    class Meta:
+        model = User
+        fields = '__all__'

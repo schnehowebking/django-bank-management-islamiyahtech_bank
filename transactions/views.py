@@ -292,7 +292,7 @@ class TransferMoneyView(LoginRequiredMixin, CreateView):
                 f'Successfully transferred {"{:,.2f}".format(float(amount))}$ to the account {recipient_account}'
             )
             send__money_transfer_email(self.request.user,recipient_account, amount, "Transfer Money Message", "transactions/sender_transfermoney_email.html")
-            send__money_transfer_email(self.request.user,recipient_account, amount, "Transfer Money Message", "transactions/receiver_transfermoney_email.html")
+            send__money_transfer_email(recipient_account.user, self.request.user, amount, "Transfer Money Message", "transactions/receiver_transfermoney_email.html")
             
 
         return super().form_valid(form)

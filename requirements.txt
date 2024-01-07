@@ -8,6 +8,7 @@ click
 colorama
 colorlog
 crispy-bootstrap5
+dj-database-url
 Django
 django-crispy-forms
 django-environ
@@ -29,6 +30,7 @@ opencv-python
 packaging
 Pillow
 psycopg2
+psycopg2-binary
 PyAutoGUI
 PyGetWindow
 PyMsgBox
@@ -43,6 +45,7 @@ six
 soupsieve
 sqlparse
 tornado
+typing_extensions
 tzdata
 urllib3
 Werkzeug

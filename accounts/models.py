@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from .constants import ACCOUNT_TYPE, GENDER_TYPE
 
 class Bank(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(default="Islamiyahtech Bank", max_length=100)
     is_bankrupt = models.BooleanField(default=False)
 
     def __str__(self):

@@ -1,14 +1,23 @@
-{% extends 'base.html' %} {% load static %} {% block head_title %}Banking System{% endblock %} {% block content %} {% if form.non_field_errors %} {% for error in form.non_field_errors %}
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head_title %}Banking System{% endblock %} 
+{% block content %} 
+{% if form.non_field_errors %} 
+{% for error in form.non_field_errors %}
 <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-2" role="alert">
     <p class="font-bold">Error!</p>
     <p class="block sm:inline">{{ error }}</p>
 </div>
-{% endfor %} {% endif %} {% if form.non_field_errors %} {% for error in form.non_field_errors %}
+{% endfor %} 
+{% endif %} 
+{% if form.non_field_errors %} 
+{% for error in form.non_field_errors %}
 <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-2" role="alert">
     <p class="font-bold">Error!</p>
     <p class="block sm:inline">{{ error }}</p>
 </div>
-{% endfor %} {% endif %}
+{% endfor %}
+ {% endif %}
 <div class="bg-white px-3 py-4 rounded-xl my-6">
 
     <h4 class="font-bold text-3xl text-left pb-5">Account NO: {{request.user.account.account_no}}</h4>
@@ -118,6 +127,7 @@
                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                     Update
                 </button>
+                <a class="bg-blue-500 hover:bg-black-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" href="{% url 'change_password' %}">Change Your Password</a>
             </div>
         </form>
     </div>

@@ -142,6 +142,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+CSRF_TRUSTED_ORIGINS = ['https://islamiyahtechbank.onrender.com/', 'http://127.0.0.1:8000/']
 
 
 # Static files (CSS, JavaScript, Images)
